@@ -1,4 +1,8 @@
 /*typography */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -146,4 +150,76 @@ a {
     .list--tick .list__item{
         padding-left: 0;
     }
+}
+/*Icons */
+.icon{
+  width: 40px;
+  height: 40px;
+}
+
+.icon--primary{
+  fill: var(--color-primary);
+}
+
+.icon-wrapper{
+  display: inline-flex;
+  background: #f3f9fa;
+  width: 64px;
+  height: 64px;
+  border-radius: 20%;
+  justify-content: center;
+  align-items: center;
+}
+
+/*Buttons */
+.btn{
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 2rem 3rem;
+  border-radius: 50px;
+  border: none;
+  margin: 2rem;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: 0.5s;
+  text-align: center;
+
+}
+
+.btn:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 1rem 2rem rgba(0,0,0,0.4);
+}
+
+.btn--primary{
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.btn--secondary{
+  background-color: var(--color-secondary);
+  color: white;
+}
+
+.btn--accent{ 
+  background-color: var(--color-accent);
+  color: white;
+}
+
+.btn--outline{
+  background-color: transparent;
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+}
+
+.btn--block{
+  display: inline-block;
+  width: 100%;
+}
+
+@media screen and (min-width: 1024px){
+  .btn{
+    font-size: 1.5rem;
+  }
 }
