@@ -14,43 +14,18 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <div class="collapsible collapsible--expanded">
-      <header class="collapsible__header">
-        <h3 class="collapsible__heading">Item1</h3>
-        <span class="icon-wrapper">
-          <svg
-            class="icon icon--primary collapsible__chevron"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 51 51"
-          >
-            <circle fill="#393939" cx="25.5" cy="25.5" r="25.5" />
-            <rect
-              fill="#fff"
-              x="24.4"
-              y="27.9"
-              width="1.6"
-              height="15.24"
-              rx="0.8"
-              transform="matrix(0.78, -0.63, 0.63, 0.78, -21.26, 15.39)"
-            />
-            <rect
-              fill="#fff"
-              x="33.3"
-              y="27.9"
-              width="1.6"
-              height="15.24"
-              rx="0.8"
-              transform="translate(24 -21.9) rotate(37.3)"
-            />
-          </svg>
-        </span>
-      </header>
-      <p class="collapsible__content">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae nemo
-        nisi ullam aperiam possimus enim voluptas, debitis laboriosam voluptatum
-        dolorum dicta eos? Provident veritatis nesciunt aperiam consequatur vel
-        cupiditate ipsam?
-      </p>
-    </div>
+    <nav class="navbar collapsible">
+      <a href="/"><img src="images/logo.svg" alt="" class="navbar__logo"/></a>
+      <svg class="icon icon--white nav__toggler">
+        <use xlink:href="images/sprite.svg#menu"></use>
+      </svg>
+      <ul class="list nav__list collapsible__content">
+        <li class="nav__item"><a href="#"></a>Hosting</li>
+        <li class="nav__item"><a href="#"></a>VPS</li>
+        <li class="nav__item"><a href="#"></a>Domain</li>
+        <li class="nav__item"><a href="#"></a>Pricing</li>
+      </ul>
+    </nav>
+    <script src="main.js"></script>
   </body>
 </html>

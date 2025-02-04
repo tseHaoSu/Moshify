@@ -75,6 +75,12 @@ p {
 a {
   text-decoration: none;
 }
+
+.container{
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
 .link-arrow {
   color: var(--color-accent);
   text-transform: uppercase;
@@ -519,27 +525,121 @@ a {
 }
 
 /*collapsible */
-.collapsible__header{
+.collapsible__header {
   display: flex;
   justify-content: space-between;
 }
 
-.collapsible__heading{
+.collapsible__heading {
   margin-top: 0rem;
 }
 
-.collapsible__chevron{
+.collapsible__chevron {
   transform: rotate(-90deg);
+  transition: transform 0.5s;
 }
 
-.collapsible__content{
-  display: none
+.collapsible__content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.5s;
 }
 
-.collapsible--expanded .collapsible__chevron{
-  transform: rotate(0deg);
+.collapsible--expanded .collapsible__chevron {
+  transform: rotate(0);
 }
 
-.collapsible--expanded .collapsible__content{
-  display: block;
+.collapsible--expanded .collapsible__content {
+  max-height: 100vh;
+  opacity: 1;
+}
+
+/*blocks */
+.block{
+  padding: 6rem 2rem;
+}
+
+.block__heading{
+  margin-top: 0;
+}
+
+.block__header{
+  text-align: center;
+}
+
+.block--dark{
+  background: black;
+  color: var(--color-body);
+}
+
+.block--dark .block__heading{
+  color: white;
+}
+
+.block--skewed-right{
+  padding-bottom: 10rem;
+  clip-path: polygon(0 0, 100% 0, 100% 83%, 0 100%);
+}
+
+/*navbar */
+.navbar{
+  background: black;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0rem 1rem;
+  align-items: center;
+}
+
+.nav__list{
+  width: 100%;
+  margin: 0;
+}
+
+.nav__item{
+  padding: 0.5rem 2rem;
+  color: rgb(111, 103, 103);
+  border-bottom: darkgrey solid 0.5px;
+  transition: color 0.8s ease-in-out;
+}
+
+
+.nav__item:hover{
+  color: white;
+}
+
+.nav__toggler{
+  opacity: 0.5;
+  cursor: pointer;
+  transition: box-shadow 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+
+.nav__toggler:hover {
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.5); /* White glow effect */
+  transform: scale(1.1); /* Slightly enlarges the toggler */
+  transform: rotateZ(360deg);
+}
+
+.navbar__logo{
+  transform: translateY(7px);
+}
+
+@media screen and (min-width: 768px) {
+  .nav__toggler{
+    display: none;
+  }
+
+  .nav__list{
+    width: auto;
+    display: flex;
+    font-size: 1.6 rem;
+    max-height: 100%;
+    opacity: 1;
+  }
+
+  .nav__item{
+    border-bottom: none;
+    margin-right: 2rem;
+  }
 }
