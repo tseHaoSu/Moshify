@@ -14,18 +14,43 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <h1>Heading</h1>
-    <h2>Heading</h2>
-    <h3>Heading</h3>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nihil esse
-      laborum harum, consequuntur consequatur alias nisi aspernatur similique
-      consectetur praesentium dolorum, dolore facere id dignissimos assumenda
-      rerum! Illum, rerum.
-    </p>
-    <div class="input-group">
-      <input type="text" class="input" placeholder="Enter your domain" />
-      <button class="btn btn--accent">Search</button>
+    <div class="collapsible collapsible--expanded">
+      <header class="collapsible__header">
+        <h3 class="collapsible__heading">Item1</h3>
+        <span class="icon-wrapper">
+          <svg
+            class="icon icon--primary collapsible__chevron"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 51 51"
+          >
+            <circle fill="#393939" cx="25.5" cy="25.5" r="25.5" />
+            <rect
+              fill="#fff"
+              x="24.4"
+              y="27.9"
+              width="1.6"
+              height="15.24"
+              rx="0.8"
+              transform="matrix(0.78, -0.63, 0.63, 0.78, -21.26, 15.39)"
+            />
+            <rect
+              fill="#fff"
+              x="33.3"
+              y="27.9"
+              width="1.6"
+              height="15.24"
+              rx="0.8"
+              transform="translate(24 -21.9) rotate(37.3)"
+            />
+          </svg>
+        </span>
+      </header>
+      <p class="collapsible__content">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae nemo
+        nisi ullam aperiam possimus enim voluptas, debitis laboriosam voluptatum
+        dolorum dicta eos? Provident veritatis nesciunt aperiam consequatur vel
+        cupiditate ipsam?
+      </p>
     </div>
   </body>
 </html>
