@@ -792,6 +792,7 @@ a {
 /*footer */
 .footer{
   background: #232323;
+  margin-top: 0rem;
 }
 
 .footer__section{
