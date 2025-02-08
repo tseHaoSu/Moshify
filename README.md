@@ -1,3 +1,3 @@
 # Project Title
 
-This is a webpage project using html and css.
+This is a landing page for a tech website
